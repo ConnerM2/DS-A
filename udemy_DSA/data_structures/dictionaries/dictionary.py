@@ -5,7 +5,6 @@ student_scores = {
     'Draco': 75,
     'Neville': 60
 }
-
 student_grades = {}
 
 for key in student_scores:
@@ -22,7 +21,6 @@ for key in student_scores:
 print (student_grades)
 
 print(student_scores)
-
 
 
 # Making own hash table (dictionary)

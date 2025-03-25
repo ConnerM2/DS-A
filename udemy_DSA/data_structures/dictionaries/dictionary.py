@@ -21,8 +21,7 @@ for key in student_scores:
         student_grades[key] = "Fail"
 print (student_grades)
 
-print(student_scores)
-
+print  (student_scores)
 
 
 # Making own hash table (dictionary)

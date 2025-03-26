@@ -22,6 +22,18 @@ print (student_grades)
 
 print  (student_scores)
 
+# Tally count
+# Tallies all ints in an array
+def tally_count(nums: list[int]):
+    my_dict = {}
+
+    for num in nums:
+        if num in my_dict:
+            my_dict[num] += 1
+        else:
+            my_dict[num] = 1
+    return my_dict
+
 # Making own hash table (dictionary)
 
 class HashTable:

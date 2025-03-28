@@ -15,7 +15,22 @@
 # Output: [3,99,-1,-100]
 # Explanation: 
 # rotate 1 steps to the right: [99,-1,-100,3]
-# rotate 2 steps to the right: [3,99,-1,-100]
+# rotate 2 steps to the right: [3,99,-1,-100]\
 
+# Solution 1
+# O(n) time complexity; O(n) space complexity
 def rotate_array(nums: list[int], k: int) -> list[int]:
-    pass
+    new_arr = [0] * len(nums)
+      # 9 % 7 = 2; This gives you shift amount even if it exceed the len(nums)
+    k = k % len(nums)
+
+    for i in range(len(nums)):
+                # here, same idea, (6 + 2) % 7 = 1; This will wrap around the array
+        new_arr[(i + k) % len(nums)] = nums[i]
+
+    for i in range(len(nums)):
+        nums[i] = new_arr[i]
+    
+    return nums
+
+print(rotate_array([1,2,3,4,5,6,7], 3))

@@ -1,27 +1,3 @@
-student_scores = {
-    'Harry': 88,
-    'Ron': 78,
-    'Hermione': 95,
-    'Draco': 75,
-    'Neville': 60
-}
-student_grades = {}
-
-for key in student_scores:
-    score = student_scores[key]
-    print(score)
-    if score >= 91:
-        student_grades[key] = "Outstanding"
-    elif score >= 81 and score <= 90:
-        student_grades[key] = "Exceeds Expectations"
-    elif score >= 71 and score <= 80:
-        student_grades[key] = "Acceptable"
-    else:
-        student_grades[key] = "Fail"
-print (student_grades)
-
-print  (student_scores)
-
 # Tally count
 # Tallies all ints in an array
 def tally_count(nums: list[int]):

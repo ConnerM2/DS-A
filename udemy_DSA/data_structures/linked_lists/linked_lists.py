@@ -4,21 +4,6 @@
 # Nodes are essentially a dictionary
 #      {"value": 10, "next": None}
 
-# This isn't a linked list, but you can think of it like a linked list
-head = {
-    "value": 11,
-    "next": {
-        "value": 3,
-        "next": {
-            "value": 23,
-            "next": {
-                "value": 7,
-                "next": None
-            }
-        }
-    }
-}
-print(head["next"]["next"]["value"])
 
 # Creating a linked list
 class Node:
@@ -34,6 +19,24 @@ class LinkedList:
         self.head = new_node
         self.tail = new_node
         self.length = 1
+    
+    def append(self, value):
+        new_node = Node(value)
+        if self.head is None:
+            self.head = new_node
+            self.tail = new_node
+        else:
+            self.tail.next = new_node
+            self.tail = new_node
+        self.length += 1
+        return True
+
+    def print_list(self):
+        temp = self.head
+        while temp is not None:
+            print(temp.value)
+            temp = temp.next
 
 my_linked_list = LinkedList(4)
-print(my_linked_list.head.value)
+my_linked_list.append(3)
+my_linked_list.print_list()

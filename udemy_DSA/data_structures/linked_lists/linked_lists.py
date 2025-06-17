@@ -8,7 +8,7 @@ Nodes are essentially a dictionary
 
 
 # Creating a linked list
-class Node:
+class Node: 
     # Creates nodes
     def __init__(self, value):
         self.value = value
@@ -53,6 +53,7 @@ class LinkedList:
         return temp
     
     def prepend(self, value): 
+        pass
 
     def print_list(self):
         temp = self.head

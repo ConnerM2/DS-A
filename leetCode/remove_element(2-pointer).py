@@ -13,20 +13,29 @@
 # It does not matter what you leave beyond the returned k (hence they are underscores).
 
 def remove_val(nums: list[int], val: int) -> int:
-    i = 0
-    j = len(nums) - 1
+    # i = 0
+    # j = len(nums) - 1
 
-    while i <= j:
-        if nums[i] == val and nums[j] == val:
-            j -= 1
-        elif nums[i] == val and nums[j] != val:
-            nums[i] = nums[j]
-            i += 1
-            j -= 1
-        else:
-            i += 1
+    # while i <= j:
+    #     if nums[i] == val and nums[j] == val:
+    #         j -= 1
+    #     elif nums[i] == val and nums[j] != val:
+    #         nums[i] = nums[j]
+    #         i += 1
+    #         j -= 1
+    #     else:
+    #         i += 1
 
-    return i, nums
+    # return i, nums
+
+    k = 0
+        
+    for i in range(len(nums)):
+        if nums [i] != val:
+            print(nums[k], nums[i])
+            nums[k] = nums[i]
+            k += 1
+    return k, nums
 
 print(remove_val([0,1,2,2,3,0,4,2], 2))
 print(remove_val([1], 1))

@@ -21,5 +21,4 @@ def sell_stonk(prices: list[int]) -> int:
             total_profit += prices[i] - prices[i-1]
 
     return total_profit
-
 print(sell_stonk([7,1,5,3,6,4]))

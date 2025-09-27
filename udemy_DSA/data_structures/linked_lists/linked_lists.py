@@ -6,7 +6,6 @@ Nodes are essentially a dictionary
      {"value": 10, "next": None}
 """
 
-
 # Creating a linked list
 class Node: 
     # Creates nodes
